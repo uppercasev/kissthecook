@@ -5,7 +5,7 @@ export default function Method({ recipe }) {
       <div style={{ textAlign: "left" }}>
         <ol>
           {recipe.steps.map((step, index) => {
-            return <li>{step.description}</li>;
+            return <li key={index}>{step.description}</li>;
           })}
         </ol>
       </div>

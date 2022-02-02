@@ -1,17 +1,15 @@
-import TitleBar from "./TitleBar";
-import LeftNav from "./LeftNav";
-import RecipePage from "./RecipePage";
+import { BrowserRouter as Router } from "react-router-dom";
+import NavBar from "./NavBar";
+import Content from "./Content";
 
 function App() {
   return (
     <div>
-      <div style={{ padding: "10px"}}>
-        <TitleBar />
-      </div>
-      <div style={{ display: "flex", padding: "10px" }}>
-        <LeftNav />
-        <RecipePage />
-      </div>
+      <Router>
+        <NavBar />
+        <hr></hr>
+        <Content />
+      </Router>
     </div>
   );
 }
