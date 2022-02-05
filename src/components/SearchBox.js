@@ -1,7 +1,8 @@
-export default function SearchBox() {
+export default function SearchBox({ label, labelText }) {
   return (
     <div>
-      <input type="text" name="search" placeholder='Search...'></input>
+      <label htmlFor={label}>{labelText}</label>
+      <input type="text" name={label} placeholder='Search...'></input>
     </div>
   );
 }

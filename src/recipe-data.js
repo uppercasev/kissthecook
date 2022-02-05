@@ -8,83 +8,23 @@ const recipes = [
             {
                 "name": "cake",
                 "ingredients": [
-                    {
-                        "name": "butter",
-                        "quantity": 125,
-                        "units": "grams",
-                        "suffix": "softened"
-                    },
-                    {
-                        "name": "caster sugar",
-                        "quantity": "3/4",
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "eggs",
-                        "quantity": 2,
-                        "units": null,
-                        "suffix": "at room temperature"
-                    },
-                    {
-                        "name": "self-raising flour",
-                        "quantity": 2,
-                        "units": "cup",
-                        "suffix": "(sift over later)"
-                    },
-                    {
-                        "name": "lemon juice",
-                        "quantity": "1/4",
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "milk",
-                        "quantity": "1/4",
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "lemon zest",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": "finely grated"
-                    },
-                    {
-                        "name": "lemon zest",
-                        "quantity": null,
-                        "units": "strips",
-                        "suffix": "to decorate"
-                    }
+                    "125 grams of butter, softened",
+                    "3/4 cup caster sugar",
+                    "2 eggs, at room temperature",
+                    "2 cups self raising flour",
+                    "1/4 cup lemon juice",
+                    "1/4 cup milk",
+                    "1 tsp lemon zest, finely grated",
+                    "lemon zest strips, to decorate"
                 ]
             },
             {
                 "name": "Lemon frosting",
                 "ingredients": [
-                    {
-                        "name": "butter",
-                        "quantity": 80,
-                        "units": "grams",
-                        "suffix": "softened"
-                    },
-                    {
-                        "name": "icing sugar",
-                        "quantity": "1 1/2",
-                        "units": "cup",
-                        "suffix": "sifted"
-                    },
-                    {
-                        "name": "lemon zest",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": "finely grated"
-                    },
-                    {
-                        "name": "lemon juice",
-                        "quantity": 2,
-                        "units": "tbsp",
-                        "suffix": "(plus extra to taste)"
-                    }
+                    "80 grams of butter, softened",
+                    "1 1/2 cups icing sugar, sifted",
+                    "1 tsp lemon zest",
+                    "2 tbsp lemon juice (plus extra to taste)",
                 ]
             }
         ],
@@ -121,36 +61,11 @@ const recipes = [
             {
                 "name": "Treats",
                 "ingredients": [
-                    {
-                        "name": "banana",
-                        "quantity": 1,
-                        "units": null,
-                        "suffix": "peeled & mashed",
-                    },
-                    {
-                        "name": "egg",
-                        "quantity": "1",
-                        "units": null,
-                        "suffix": null,
-                    },
-                    {
-                        "name": "natural peanut butter",
-                        "quantity": 2,
-                        "units": "tbsp",
-                        "suffix": null,
-                    },
-                    {
-                        "name": "plain flour",
-                        "quantity": "1/4",
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "tapioca flour",
-                        "quantity": "1/4",
-                        "units": "cup",
-                        "suffix": null
-                    },
+                    "1 banana, peeled & mashed",
+                    "1 egg",
+                    "2 tbsp natural peanut butter",
+                    "1/4 cup plain flour",
+                    "1/4 cup tapioca flour",
                 ]
             },
         ],
@@ -178,111 +93,32 @@ const recipes = [
             {
                 "name": "Ribs",
                 "ingredients": [
-                    {
-                        "name": "baby back pork ribs",
-                        "quantity": 2,
-                        "units": "kg",
-                    },
-                    {
-                        "name": "olive oil",
-                        "quantity": 2,
-                        "units": "tbsp",
-                        "suffix": null
-                    },
+                    "2 kg baby back pork ribs",
+                    "2 tbsp olive oil",
                 ]
             },
             {
                 "name": "Rub",
                 "ingredients": [
-                    {
-                        "name": "garlic powder",
-                        "quantity": 2,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "onion powder",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "paprika",
-                        "quantity": 2,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "salt",
-                        "quantity": 2,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "cracked black pepper",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "cayenne pepper",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "cumin",
-                        "quantity": 0.5,
-                        "units": "tsp",
-                        "suffix": null
-                    },
+                    "2 tsp garlic powder",
+                    "1 tsp onion powder",
+                    "2 tsp paprika",
+                    "2 tsp salt",
+                    "1 tsp cracked black pepper",
+                    "1 tsp cayenne pepper",
+                    "1/2 tsp cumin"
                 ]
             },
             {
                 "name": "Sauce",
                 "ingredients": [
-                    {
-                        "name": "smokey barbeque sause",
-                        "quantity": 500,
-                        "units": "ml",
-                        "suffix": null
-                    },
-                    {
-                        "name": "garlic",
-                        "quantity": 3,
-                        "units": "tbsp",
-                        "suffix": "minced"
-                    },
-                    {
-                        "name": "olive oil",
-                        "quantity": 2,
-                        "units": "tbsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "tomato sauce",
-                        "quantity": 2,
-                        "units": "tbsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "worcestershire sauce",
-                        "quantity": 1,
-                        "units": "tbsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "cracked pepper",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "salt",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": null
-                    },
+                    "500ml smokey barbeque sause",
+                    "3 tbsp garlic, minced",
+                    "2 tbsp olive oil",
+                    "2 tbsp tomato sauce",
+                    "1 tbsp worcestershire sauce",
+                    "1 tsp cracked pepper",
+                    "1 tsp salt",
                 ]
             },
         ],
@@ -325,65 +161,20 @@ const recipes = [
             {
                 "name": "Cake",
                 "ingredients": [
-                    {
-                        "name": "carrot",
-                        "quantity": "1/2",
-                        "units": "cup",
-                        "suffix": "grated"
-                    },
-                    {
-                        "name": "plain flour",
-                        "quantity": "1/2",
-                        "units": "cup",
-                        "suffix": "sifted"
-                    },
-                    {
-                        "name": "baking soda",
-                        "quantity": "1/2",
-                        "units": "tsp",
-                        "suffix": "sifted"
-                    },
-                    {
-                        "name": "egg",
-                        "quantity": 1,
-                        "units": null,
-                        "suffix": "small"
-                    },
-                    {
-                        "name": "natural peanut butter",
-                        "quantity": "1 1/2",
-                        "units": "tbsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "vegetable oil",
-                        "quantity": "1 1/2",
-                        "units": "tbsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "vanilla extract",
-                        "quantity": "1/2",
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "honey",
-                        "quantity": 2,
-                        "units": "tbsp",
-                        "suffix": null
-                    }
+                    "1/2 cup carrot, grated",
+                    "1/2 cup plain flour, sifted",
+                    "1/2 tsp baking soda sifted",
+                    "1 egg, small",
+                    "1 1/2 tbsp natural peanut butter",
+                    "1 1/2 tbsp vegetable oil",
+                    "1/2 tsp vanilla extract",
+                    "2 tbsp honey"
                 ]
             },
             {
                 "name": "Icing",
                 "ingredients": [
-                    {
-                        "name": "butternut pumpkin",
-                        "quantity": "1/2",
-                        "units": null,
-                        "suffix": null
-                    },
+                    "1/2 butternut pumpkin",
                 ]
             }
         ],
@@ -420,48 +211,13 @@ const recipes = [
             {
                 "name": "Pancakes",
                 "ingredients": [
-                    {
-                        "name": "milk",
-                        "quantity": "1 1/2",
-                        "units": "cups",
-                        "suffix": null,
-                    },
-                    {
-                        "name": "egg",
-                        "quantity": "1",
-                        "units": null,
-                        "suffix": "large",
-                    },
-                    {
-                        "name": "vanilla extract",
-                        "quantity": 2,
-                        "units": "tsp",
-                        "suffix": null,
-                    },
-                    {
-                        "name": "self raising flour",
-                        "quantity": 2,
-                        "units": "cup",
-                        "suffix": "sifted"
-                    },
-                    {
-                        "name": "bicarb soda",
-                        "quantity": "1/4",
-                        "units": "tsp",
-                        "suffix": "sifted"
-                    },
-                    {
-                        "name": "caster sugar",
-                        "quantity": "1/3",
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "butter",
-                        "quantity": null,
-                        "units": null,
-                        "suffix": "to cook with"
-                    },
+                    "1 1/2 cups milk",
+                    "1 egg, large",
+                    "2 tsp vanilla extract",
+                    "2 cup self raising flour, sifted",
+                    "1/4 tsp bicarb soda, sifted", 
+                    "1/3 cup caster sugar",
+                    "butter, to cook with",
                 ]
             },
         ],
@@ -492,54 +248,14 @@ const recipes = [
             {
                 "name": "Fritters",
                 "ingredients": [
-                    {
-                        "name": "middle bacon",
-                        "quantity": 2,
-                        "units": "rashers",
-                        "suffix": "rind trimmed, pat dry, roughly chopped",
-                    },
-                    {
-                        "name": "corn kernels",
-                        "quantity": "1",
-                        "units": "cup",
-                        "suffix": "fresh (1 large cob)",
-                    },
-                    {
-                        "name": "zucchini",
-                        "quantity": 1,
-                        "units": null,
-                        "suffix": "grated, excess liquid squeezed",
-                    },
-                    {
-                        "name": "self raising flour",
-                        "quantity": "1/3",
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "eggs",
-                        "quantity": 2,
-                        "units": null,
-                        "suffix": "lightly beaten"
-                    },
-                    {
-                        "name": "spring onions",
-                        "quantity": 2,
-                        "units": null,
-                        "suffix": "thinly sliced"
-                    },
-                    {
-                        "name": "parsley",
-                        "quantity": 1,
-                        "units": "tbsp",
-                        "suffix": "chopped"
-                    },
-                    {
-                        "name": "vegetable oil",
-                        "quantity": null,
-                        "units": null,
-                        "suffix": "for shallow frying"
-                    },
+                    "2 rashers middle bacon, rind trimmed, pat dry, roughly chopped",
+                    "1 cup corn kernels, fresh (1 large cob)",
+                    "1 zucchini, grated, excess liquid squeezed",
+                    "1/3 cup self raising flour",
+                    "2 eggs, lightly beaten",
+                    "2 spring onions, thinly sliced",
+                    "1 tbsp parsley, chopped",
+                    "vegetable oil, for shallow frying",
                 ]
             },
         ],
@@ -564,66 +280,16 @@ const recipes = [
             {
                 "name": "Soup",
                 "ingredients": [
-                    {
-                        "name": "chicken stock",
-                        "quantity": 8,
-                        "units": "cups",
-                        "suffix": "divided into 7 parts and 1 part",
-                    },
-                    {
-                        "name": "ginger",
-                        "quantity": 2,
-                        "units": "tsp",
-                        "suffix": "ground",
-                    },
-                    {
-                        "name": "chicken breast",
-                        "quantity": 500,
-                        "units": "g",
-                        "suffix": "cut in thick slices",
-                    },
-                    {
-                        "name": "garlic powder",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "green onions",
-                        "quantity": 3,
-                        "units": null,
-                        "suffix": "thinly sliced with the green and white parts divided"
-                    },
-                    {
-                        "name": "carrots",
-                        "quantity": 2,
-                        "units": null,
-                        "suffix": "medium size, finely diced"
-                    },
-                    {
-                        "name": "corn kernels",
-                        "quantity": 420,
-                        "units": "g",
-                        "suffix": "can, drained"
-                    },
-                    {
-                        "name": "creamed corn",
-                        "quantity": 400,
-                        "units": "g",
-                        "suffix": "can"
-                    },
-                    {
-                        "name": "cornflour",
-                        "quantity": "1/4",
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "eggs",
-                        "quantity": 5,
-                        "units": null,
-                        "suffix": "large size, whisked"
-                    },
+                    "8 cups chicken stock, divided into 7 parts and 1 part",
+                    "2 tsp ginger, ground",
+                    "500g chicken breast, cut in thick slices",
+                    "1 tsp garlic powder",
+                    "3 green onions, thinly sliced with the green and white parts divided",
+                    "2 carrots, medium size, finely diced",
+                    "420g corn kernels, can, drained",
+                    "400g creamed corn, can",
+                    "1/4 cup cornflour",
+                    "5 eggs, large size, whisked",
                 ]
             },
         ],
@@ -654,83 +320,23 @@ const recipes = [
             {
                 "name": "Slice",
                 "ingredients": [
-                    {
-                        "name": "Lime Zest",
-                        "quantity": null,
-                        "units": null,
-                        "suffix": "from 3 limes, grated",
-                    },
-                    {
-                        "name": "Lime juice",
-                        "quantity": "1/3",
-                        "units": "cup",
-                        "suffix": null,
-                    },
-                    {
-                        "name": "Arnotts Marie Buscuits",
-                        "quantity": 250,
-                        "units": "g",
-                        "suffix": "1 packet, crushed",
-                    },
-                    {
-                        "name": "sweetened condenced milk",
-                        "quantity": 250,
-                        "units": "g",
-                        "suffix": null
-                    },
-                    {
-                        "name": "desiccated coconut",
-                        "quantity": 1,
-                        "units": "cup",
-                        "suffix": null
-                    },
-                    {
-                        "name": "butter",
-                        "quantity": 80,
-                        "units": "g",
-                        "suffix": "melted"
-                    },
+                    "Lime Zest, from 3 limes, grated",
+                    "1/3 cup Lime juice",
+                    "250g Arnotts Marie Buscuits, 1 packet, crushed",
+                    "250g sweetened condenced milk",
+                    "1 cup desiccated coconut",
+                    "80g butter, melted"
                 ]
             },
             {
                 "name": "Lime Frosting",
                 "ingredients": [
-                    {
-                        "name": "icing sugar",
-                        "quantity": 360,
-                        "units": "g",
-                        "suffix": "sifted",
-                    },
-                    {
-                        "name": "butter",
-                        "quantity": 100,
-                        "units": "g",
-                        "suffix": "softened to room temperature",
-                    },
-                    {
-                        "name": "Lime zest",
-                        "quantity": 1,
-                        "units": "tsp",
-                        "suffix": null,
-                    },
-                    {
-                        "name": "Lime Juice",
-                        "quantity": 2,
-                        "units": "tbsp",
-                        "suffix": "extra to taste"
-                    },
-                    {
-                        "name": "desiccated coconut",
-                        "quantity": 3,
-                        "units": "tbsp",
-                        "suffix": null
-                    },
-                    {
-                        "name": "Lime Zest",
-                        "quantity": null,
-                        "units": null,
-                        "suffix": "grate directly over slice at the end"
-                    },
+                    "360g icing sugar, sifted",
+                    "100g butter, softened to room temperature",
+                    "1 tsp Lime zest",
+                    "2 tbsp Lime Juice, extra to taste",
+                    "3 tbsp desiccated coconut",
+                    "Lime Zest, grate directly over slice at the end"
                 ]
             },
         ],
