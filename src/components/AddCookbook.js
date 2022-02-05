@@ -34,7 +34,7 @@ export default function AddCookbook({ onBookSubmit }) {
   return (
     <div>
       <button type="button" onClick={handleClick}>
-        Add a new Cookbook
+        Create a new Cookbook
       </button>
       {addNewBook && (
         <form onSubmit={handleSubmit}>
@@ -53,7 +53,7 @@ export default function AddCookbook({ onBookSubmit }) {
             onChange={handleDescriptionChange}
           ></textarea>
           <br></br>
-          <input type="submit" value="Add new Cookbook"></input>
+          <input type="submit" value="Create new Cookbook"></input>
           <input
             type="button"
             value="Cancel"
