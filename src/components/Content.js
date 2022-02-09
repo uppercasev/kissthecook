@@ -1,10 +1,10 @@
 import Display from "./Display";
 import LeftMenu from "./LeftMenu";
 
-export default function Content() {
+export default function Content({ recipes }) {
     return (
     <div style={{ display: "flex" }}>
-      <LeftMenu />
+      <LeftMenu recipes={recipes}/>
       <Display />
     </div>
   );

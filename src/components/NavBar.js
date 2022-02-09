@@ -5,12 +5,10 @@ import Logo from "./Logo";
 
 function NavBar() {
   return (
-    <div style={{display: "flex", justifyContent: "space-between"}}>
-      <Logo />
-      <NavLink to="/mycookbooks">MY COOKBOOKS</NavLink>
+    <div style={{display: "flex", justifyContent: "space-around"}}>
+      <NavLink to="/"><Logo /></NavLink>
       <NavLink to="/myrecipes">MY RECIPES</NavLink>
       <NavLink to="/addrecipe">ADD NEW RECIPE</NavLink>
-      <SearchBox />
     </div>
   );
 }

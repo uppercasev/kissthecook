@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import RecipesList from "./RecipesList";
 
-export default function LeftMenu() {
+export default function LeftMenu({ recipes }) {
   return (
-    <div style={{padding: "10px", textAlign: "center"}}>
-      <h2>Secondary nav</h2>
-      <NavLink to="/recipeid=1">Lemon Cake</NavLink>
+    <div style={{padding: "10px", width: "300px"}}>
+      <h2>All recipes</h2>
+      <RecipesList recipes={recipes} />
     </div>
   );
 }
