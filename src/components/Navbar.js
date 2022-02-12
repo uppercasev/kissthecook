@@ -5,13 +5,13 @@ function Navbar() {
     return (
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", height: "70px"}}>
             <div>
-            <NavLink to="/">Logo</NavLink>
+            <NavLink to="/" style={{ textDecoration: "none", color: "black" }}>Logo</NavLink>
             </div>
             <div>
-            <NavLink to="/browse">Browse Recipes</NavLink>
-            <NavLink to="/add">Add a Recipe</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/conact">Contact</NavLink>
+            <NavLink to="/browse" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Browse Recipes</NavLink>
+            <NavLink to="/add" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Add a Recipe</NavLink>
+            <NavLink to="/about" style={{ textDecoration: "none", color: "black", margin: "20px" }}>About</NavLink>
+            <NavLink to="/conact" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Contact</NavLink>
             </div>
         </div>
     )

@@ -1,7 +1,6 @@
 function ListItem({ item }) {
   return (
-
-      <div style={{display: "flex", height: "220px", alignItems: "center"}}>
+      <div style={{display: "flex", height: "220px", alignItems: "center", borderBottomStyle: "solid", borderWidth: "1px", borderColor: "silver"}}>
         <div>
           <img
             src={item.image_url}

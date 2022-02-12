@@ -10,6 +10,15 @@
   background-position: 0% 20%;
 }
 
+.button {
+  color: white;
+  background: black;
+  border: none;
+  padding: 6px 30px;
+  border-radius: 6px;
+  margin: 8px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
