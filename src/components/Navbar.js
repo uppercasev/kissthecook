@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return (
-        <div style={{display: "flex", justifyContent: "space-between"}}>
+        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", height: "70px"}}>
             <div>
             <NavLink to="/">Logo</NavLink>
             </div>

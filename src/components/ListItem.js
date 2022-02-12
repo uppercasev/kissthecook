@@ -1,14 +1,19 @@
-function ListItem() {
+function ListItem({ item }) {
   return (
-    <div>
-      <a href={`/recipes/${item.id}`}>
-        <li key={item.id} style={{ display: "flex" }}>
-          <img src={item.image_url} style={{ width: "100px" }}></img>
+
+      <div style={{display: "flex", height: "220px", alignItems: "center"}}>
+        <div>
+          <img
+            src={item.image_url}
+            style={{ width: "200px", height: "150px", objectFit: "cover", margin: "10px" }}
+          />
+        </div>
+        <div>
           <h2>{item.name}</h2>
-          {/* <p>{item.description}</p> */}
-        </li>
-      </a>
-    </div>
+          <p>{item.description}</p>
+        </div>
+      </div>
+
   );
 }
 
