@@ -3,13 +3,12 @@
   width: 1200px;
 }
 
-.heroLarge {
+.heroImg {
   background-image: url("../public/hero_image.jpg");
-  height: 600px;
   display: flex;
   align-items: center;
+  background-position: 0% 20%;
 }
-
 
 .App-header {
   background-color: #282c34;
