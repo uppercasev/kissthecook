@@ -29,7 +29,7 @@ export default function Display() {
           }
         />
         <Route path="/addrecipe" element={<AddRecipe />} />
-        <Route path="/recipes/:id" element={<RecipePage recipes={recipes} />} />
+        <Route path="/myrecipes/:id" element={<RecipePage recipes={recipes} />} />
       </Routes>
     </div>
   );
