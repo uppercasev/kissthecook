@@ -10,11 +10,11 @@ function Footer() {
     >
       <div style={{display: "flex", width: "1200px", color: "white", margin: "auto", alignItems: "center", height: "170px"}}>
         <div style={{ width: "220px" }}>
-          <Link to="/" style={{ textDecoration: "none" }}>Home</Link><br></br>
-          <Link to="/browse">Browse Recipes</Link><br></br>
-          <Link to="/add">Add a Recipe</Link><br></br>
-          <Link to="/about">About</Link><br></br>
-          <Link to="/conact">Contact</Link>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>Home</Link><br></br>
+          <Link to="/browse" style={{ textDecoration: "none", color: "white" }}>Browse Recipes</Link><br></br>
+          <Link to="/add" style={{ textDecoration: "none", color: "white" }}>Add a Recipe</Link><br></br>
+          <Link to="/about" style={{ textDecoration: "none", color: "white" }}>About</Link><br></br>
+          <Link to="/conact" style={{ textDecoration: "none", color: "white" }}>Contact</Link>
         </div>
         <div style={{fontSize: "small", width: "980px"}}>
           <p>
