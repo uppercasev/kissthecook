@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Browse from "./pages/Browse";
 import RecipeView from "./pages/RecipeView";
+import AddRecipe from "./pages/AddRecipe";
 
 function App() {
   const [allRecipes, setAllRecipes] = useState([]);
@@ -32,6 +33,7 @@ function App() {
               path="/myrecipes/:id"
               element={<RecipeView />}
             />
+            <Route path="/add" element={<AddRecipe />} />
           </Routes>
         </div>
         <Footer />
