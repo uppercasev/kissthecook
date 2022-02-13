@@ -4,8 +4,8 @@ function Sort({ handleSort, selectedSort }) {
         <span>  Sort by: </span>
         <select name="sort" onChange={handleSort} value={selectedSort}>
           <option value="alphabetical">Name (A to Z)</option>
-          <option value="time">Total time (ascending)</option>
-          <option value="recent">Most recent</option>
+          <option value="reverse">Name (Z to A)</option>
+          <option value="recent">Most recently added</option>
         </select>
       </div>
     );
