@@ -13,7 +13,7 @@ function ControlledInput({ element, type, name, require, rows, cols, size }) {
 
   if (element === "input") {
   return (
-    <div style={{ display: "flex", margin: "10px" }}>
+    <div style={{ display: "flex", marginBottom: "20px" }}>
       <div style={{ width: "20%" }}>
         <label htmlFor={name}>{capitalise(name)} </label>
       </div>
@@ -30,7 +30,7 @@ function ControlledInput({ element, type, name, require, rows, cols, size }) {
     </div>
   );} else if (element === "textarea") {
       return (
-        <div style={{ display: "flex", margin: "10px" }}>
+        <div style={{ display: "flex", marginBottom: "20px" }}>
             <div style={{ width: "20%" }}>
                  <label htmlFor={name}>{capitalise(name)}</label>
             </div>
