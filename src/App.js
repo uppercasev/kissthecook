@@ -9,18 +9,6 @@ import RecipeView from "./pages/RecipeView";
 import AddRecipe from "./pages/AddRecipe";
 
 function App() {
-  const [allRecipes, setAllRecipes] = useState([]);
-
-  const getRecipes = () => {
-    fetch("http://localhost:4000/recipes")
-      .then((r) => r.json())
-      .then((data) => setAllRecipes(data));
-  }
-
-  useEffect(() => {
-    getRecipes()
-  }, []);
-
   return (
     <div>
       <Router>
@@ -28,7 +16,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/browse" element={<Browse recipes={allRecipes} />} />
+            <Route path="/browse" element={<Browse />} />
             <Route
               path="/myrecipes/:id"
               element={<RecipeView />}

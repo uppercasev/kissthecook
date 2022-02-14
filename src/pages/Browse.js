@@ -1,48 +1,38 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import HeroImg from "../components/HeroImg";
 import ListItem from "../components/ListItem";
 import Sort from "../components/Sort";
 
-function Browse( {recipes}) {
-//   const [sortedRecipes, setSortedRecipes] = useState([]);
-const [recipesToDisplay, setRecipesToDisplay] = useState(recipes);
-const [selectedSort, setSelectedSort] = useState("alphabetical");
+function Browse() {
+const [recipesToDisplay, setRecipesToDisplay] = useState([]);
+const [sortValue, setSortValue] = useState("alphabetical");
+const [selectedSort, setSelectedSort] = useState({
+    property: "name",
+    direction: "asc"
+});
+
+const getData = (property, direction) => {
+    fetch(`http://localhost:4000/recipes?_sort=${property}&_order=${direction}`)
+      .then((r) => r.json())
+      .then((data) => setRecipesToDisplay(data));
+  }
+
+useEffect(() => {
+  getData(selectedSort.property, selectedSort.direction)
+}, [sortValue]);
+
 
 const handleSort = (event) => {
-    const orderedName = () =>
-      recipes.sort((a, b) => {
-        if (a.name < b.name) {
-          return -1;
-        }
-        if (a.name > b.name) {
-          return 1;
-        }
-        return 0;
-      });
-
-    const orderedChronological = () =>
-      recipes.sort((a, b) => {
-        if (a.id < b.id) {
-          return -1;
-        }
-        if (a.id > b.id) {
-          return 1;
-        }
-        return 0;
-      });
-
       const sortBy = event.target.value;
-      setSelectedSort(sortBy);
-
     if (sortBy === "alphabetical") {
-        setRecipesToDisplay(orderedName());
+        setSelectedSort({property: "name", direction: "asc"});
     } else if (sortBy === "reverse") {
-        setRecipesToDisplay(orderedName().reverse());
+        setSelectedSort({property: "name", direction: "desc"});
     } else if (sortBy === "recent") {
-        setRecipesToDisplay(orderedChronological().reverse());
-    }
+        setSelectedSort({property: "id", direction: "desc"});
+    }      
+    setSortValue(sortBy);
 };
-
 
   return (
     <div>
@@ -50,7 +40,7 @@ const handleSort = (event) => {
       <div style={{ display: "flex", justifyContent: "space-between" }}>
       <h1>Browse Recipes</h1>
       <div style={{ display: "flex", alignItems: "center" }}>
-          <Sort handleSort={handleSort} selectedSort={selectedSort}/>
+          <Sort handleSort={handleSort} sortValue={sortValue}/>
       </div>
       </div>
       <div>

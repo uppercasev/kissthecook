@@ -5,10 +5,14 @@ import ListItem from "../components/ListItem";
 function Home() {
   const [recent, setRecent] = useState([]);
 
-    useEffect(() => {
-    fetch("http://localhost:4000/recipes?_sort=id&_order=desc&_limit=5")
+  const getData = () => {
+    return fetch("http://localhost:4000/recipes?_sort=id&_order=desc&_limit=5")
       .then((r) => r.json())
       .then((data) => setRecent(data));
+  }
+
+  useEffect(() => {
+    getData()
   }, []);
 
   return (
