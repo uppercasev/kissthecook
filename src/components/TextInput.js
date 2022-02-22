@@ -1,3 +1,8 @@
+// does this need to be created øn every render?
+const capitalise = (name) => {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+};
+
 function TextInput({
   element,
   type,
@@ -12,14 +17,11 @@ function TextInput({
   datakey,
   dataPartKey
 }) {
-  const capitalise = () => {
-    return name.charAt(0).toUpperCase() + name.slice(1);
-  };
-
   if (element === "input") {
     return (
       <div style={{ display: "flex", marginBottom: "20px" }}>
         <div style={{ width: "20%" }}>
+          {/* wow excellent label */}
           <label htmlFor={name}>{label ?? capitalise(name)}</label>
         </div>
         <div style={{ width: "80%" }}>
@@ -30,8 +32,9 @@ function TextInput({
             required={require}
             onChange={onChange}
             size={size}
+            // I have no clue what these do, but I think it has to be lower case
             datakey={datakey}
-            dataPartKey={dataPartKey}
+            datapartkey={dataPartKey}
           />
         </div>
       </div>
@@ -52,11 +55,12 @@ function TextInput({
             onChange={onChange}
             datakey={datakey}
             dataPartKey={dataPartKey}
-          ></textarea>
+          />
         </div>
       </div>
     );
   } else {
+    // What is the purpose of this?
     return null;
   }
 }

@@ -15,6 +15,7 @@ export default function RecipeView() {
   }, []);
 
   const handleDelete = () => {
+    // I've never seen window.confirm before Lol! Good stuff! 
     const confirmDelete = window.confirm(
       "Are you sure you wish to delete this recipe?"
     );
@@ -27,6 +28,7 @@ export default function RecipeView() {
 
   return (
     <div>
+      {/* img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.eslintjsx-a11y/alt-text */}
       <img
         src={recipeToDisplay.image_url}
         style={{ height: "400px", width: "100%", objectFit: "cover" }}
@@ -68,6 +70,8 @@ export default function RecipeView() {
           </div>
           <div>
             <h2>Ingredients</h2>
+            {/* very fancy ?. operator!  */}
+            {/* oh and the && operator too!  */}
             {recipeToDisplay?.parts &&
               recipeToDisplay.parts.map((part) => {
                 return (

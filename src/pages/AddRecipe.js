@@ -25,6 +25,7 @@ function AddRecipe() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const postObject = {
       method: "POST",
       headers: {
@@ -33,8 +34,10 @@ function AddRecipe() {
       },
       body: JSON.stringify(formData),
     };
+
+    // We know async await, why use .then()? 
     fetch("http://localhost:4000/recipes", postObject)
-      .then((r) => r.json())
+      .then((response) => response.json())
       .then((data) => navigate(`/myrecipes/${data.id}`));
   };
 
@@ -141,6 +144,8 @@ function AddRecipe() {
         <div>
           <Steps steps={formData.steps} updateForm={updateForm} />
         </div>
+        {/* Why is the button called "delete"? This might not work well 
+        for those who need the name prop for screen readers */}
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button type="submit" name="delete" className="button">
             ADD NEW RECIPE

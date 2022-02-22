@@ -15,6 +15,8 @@ function EditRecipe() {
       .then((r) => r.json())
       .then((data) => setFormData(data));
   }, []);
+  // React Hook useEffect has a missing dependency: 'params.id'. Either include it or remove the dependency array.eslintreact-hooks/exhaustive-deps
+  // I think it's saying that if we updated the data in "params" then we should probably call the use effect again as there will be new data...
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,7 +32,6 @@ function EditRecipe() {
       .then((r) => r.json())
       .then((data) => navigate(`/myrecipes/${data.id}`));
   };
-
   const onTextChange = (event) => {
     updateForm(event.target.name, event.target.value);
   };
@@ -47,6 +48,7 @@ function EditRecipe() {
       <h1>Edit recipe</h1>
       <form
         onSubmit={handleSubmit}
+        // You use flex everywhere else! 
         style={{ width: "1000px", margin: "auto" }}
       >
         <TextInput
@@ -79,6 +81,10 @@ function EditRecipe() {
         />
         <div style={{ display: "flex", marginBottom: "20px" }}>
           <div style={{ width: "20%" }}>
+            {/* Excellent use of the label, and even used the htmlFor.
+            Could we consider adding a label for each text input, they don't have to be shown
+            to those who can see, but it would be useful for someone trying to navigate multiple 
+            input boxes!  */}
             <label htmlFor="details">Details </label>
           </div>
           <div

@@ -20,7 +20,7 @@ const getData = (property, direction) => {
 useEffect(() => {
   getData(selectedSort.property, selectedSort.direction)
 }, [sortValue]);
-
+// React Hook useEffect has missing dependencies: 'selectedSort.direction' and 'selectedSort.property'. Either include them or remove the dependency array.eslintreact-hooks/exhaustive-deps
 
 const handleSort = (event) => {
       const sortBy = event.target.value;

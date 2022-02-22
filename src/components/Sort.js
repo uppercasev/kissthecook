@@ -1,3 +1,4 @@
+// wow super good use of props! And even named like you've been working in react for ages
 function Sort({ handleSort, sortValue }) {
     return (
       <div>

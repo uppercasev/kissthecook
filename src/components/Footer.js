@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+function NavLink({ to, text }) {
+  return (
+    <Link to={to} style={{ textDecoration: "none", color: "white" }}>
+      {text}
+    </Link>
+  );
+}
+
 function Footer() {
   return (
     <div
@@ -9,8 +17,8 @@ function Footer() {
       }}
     >
       <div style={{display: "flex", width: "1200px", color: "white", margin: "auto", alignItems: "center", height: "170px"}}>
-        <div style={{ width: "30%" }}>
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>Home</Link><br></br>
+        <div style={{ width: "30%", display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' /* or 2 x lineHeight. We don't use <br> to add margins! */ }}>
+          <NavLink to="/" text='Home' />
           <Link to="/browse" style={{ textDecoration: "none", color: "white" }}>Browse Recipes</Link><br></br>
           <Link to="/add" style={{ textDecoration: "none", color: "white" }}>Add a Recipe</Link><br></br>
           <Link to="/about" style={{ textDecoration: "none", color: "white" }}>About</Link><br></br>
