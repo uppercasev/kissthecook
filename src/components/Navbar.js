@@ -11,7 +11,7 @@ function Navbar() {
             <NavLink to="/browse" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Browse Recipes</NavLink>
             <NavLink to="/myrecipes/add" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Add a Recipe</NavLink>
             <NavLink to="/about" style={{ textDecoration: "none", color: "black", margin: "20px" }}>About</NavLink>
-            <NavLink to="/conact" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Contact</NavLink>
+            <NavLink to="/signin" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Sign In</NavLink>
             </div>
         </div>
     )

@@ -8,6 +8,7 @@ import Browse from "./pages/Browse";
 import RecipeView from "./pages/RecipeView";
 import AddRecipe from "./pages/AddRecipe";
 import EditRecipe from "./pages/EditRecipe";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
             />
             <Route path="/myrecipes/add" element={<AddRecipe />} />
             <Route path="/myrecipes/edit/:id" element={<EditRecipe />} />
+            <Route path="/about" element={<About />}/>
+            <Route path="/signin" element={<h1>Coming soon...</h1>}/>
           </Routes>
         </div>
         <Footer />

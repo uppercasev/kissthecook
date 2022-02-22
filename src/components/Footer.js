@@ -14,7 +14,7 @@ function Footer() {
           <Link to="/browse" style={{ textDecoration: "none", color: "white" }}>Browse Recipes</Link><br></br>
           <Link to="/add" style={{ textDecoration: "none", color: "white" }}>Add a Recipe</Link><br></br>
           <Link to="/about" style={{ textDecoration: "none", color: "white" }}>About</Link><br></br>
-          <Link to="/conact" style={{ textDecoration: "none", color: "white" }}>Contact</Link>
+          <Link to="/signin" style={{ textDecoration: "none", color: "white" }}>Sign In</Link>
         </div>
         <div style={{fontSize: "small", width: "70%", textAlign: "center", paddingLeft: "30px"}}>
           <p>
