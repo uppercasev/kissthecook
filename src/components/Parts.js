@@ -1,7 +1,8 @@
 import TextInput from "./TextInput";
 
 function Parts({ parts, updateForm }) {
-  const addPart = () => {
+  const addPart = (event) => {
+    event.preventDefault();
     const newParts = [...parts, { name: "", ingredients: [""] }];
     updateForm("parts", newParts);
   };

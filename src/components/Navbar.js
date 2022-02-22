@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", height: "70px"}}>
             <div>
-            <NavLink to="/" style={{ textDecoration: "none", color: "black" }}>Logo</NavLink>
+            <NavLink to="/" style={{ textDecoration: "none", color: "black" }}><img src={"/logo.png"} height={"40px"}/></NavLink>
             </div>
             <div>
             <NavLink to="/browse" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Browse Recipes</NavLink>

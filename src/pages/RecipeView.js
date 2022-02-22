@@ -1,9 +1,10 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { React, useState, useEffect } from "react";
 
 export default function RecipeView() {
   const [recipeToDisplay, setRecipeToDisplay] = useState({});
   const params = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:4000/recipes/${params.id}`)
@@ -12,6 +13,17 @@ export default function RecipeView() {
         setRecipeToDisplay(data);
       });
   }, []);
+
+  const handleDelete = () => {
+    const confirmDelete = window.confirm(
+      "Are you sure you wish to delete this recipe?"
+    );
+    if (!confirmDelete) {
+      return;
+    }
+    fetch(`http://localhost:4000/recipes/${recipeToDisplay.id}`, { method: "DELETE" })
+    .then((navigate("/browse")));
+  };
 
   return (
     <div>
@@ -27,7 +39,12 @@ export default function RecipeView() {
               Edit
             </button>
           </Link>
-          <button type="button" name="delete" className="button">
+          <button
+            onClick={handleDelete}
+            type="button"
+            name="delete"
+            className="button"
+          >
             Delete
           </button>
         </div>
@@ -51,18 +68,19 @@ export default function RecipeView() {
           </div>
           <div>
             <h2>Ingredients</h2>
-            {recipeToDisplay?.parts && recipeToDisplay.parts.map((part) => {
-              return (
-                <div key={part.name}>
-                  <p>{part.name.toUpperCase()}</p>
-                  <ul>
-                    {part.ingredients.map((item, index) => {
-                      return <li key={index}>{item}</li>;
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
+            {recipeToDisplay?.parts &&
+              recipeToDisplay.parts.map((part) => {
+                return (
+                  <div key={part.name}>
+                    <p>{part.name.toUpperCase()}</p>
+                    <ul>
+                      {part.ingredients.map((item, index) => {
+                        return <li key={index}>{item}</li>;
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
           </div>
         </div>
         <div
@@ -70,14 +88,15 @@ export default function RecipeView() {
         >
           <h2>Method</h2>
           <ol>
-            {recipeToDisplay?.steps && recipeToDisplay.steps.map((item, index) => {
-              return (
-                <div>
-                  <li key={index}>{item}</li>
-                  <br></br>
-                </div>
-              );
-            })}
+            {recipeToDisplay?.steps &&
+              recipeToDisplay.steps.map((item, index) => {
+                return (
+                  <div>
+                    <li key={index}>{item}</li>
+                    <br></br>
+                  </div>
+                );
+              })}
           </ol>
         </div>
       </div>
