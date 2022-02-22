@@ -9,7 +9,7 @@ function Navbar() {
             </div>
             <div>
             <NavLink to="/browse" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Browse Recipes</NavLink>
-            <NavLink to="/add" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Add a Recipe</NavLink>
+            <NavLink to="/myrecipes/add" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Add a Recipe</NavLink>
             <NavLink to="/about" style={{ textDecoration: "none", color: "black", margin: "20px" }}>About</NavLink>
             <NavLink to="/conact" style={{ textDecoration: "none", color: "black", margin: "20px" }}>Contact</NavLink>
             </div>

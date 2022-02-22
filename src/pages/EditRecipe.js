@@ -1,39 +1,32 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import HeroImg from "../components/HeroImg";
 import Parts from "../components/Parts";
 import Steps from "../components/Steps";
 import TextInput from "../components/TextInput";
 
-function AddRecipe() {
-
-  const [formData, setFormData] = useState({
-    name: "",
-    description: "",
-    image_url: "",
-    serves: "",
-    allergens: "",
-    prep_time: "",
-    cook_time: "",
-    parts: [
-      { name: "", ingredients: [""] }
-    ],
-    steps: [""],
-  });
-
+function EditRecipe() {
+  const [formData, setFormData] = useState({});
+  const params = useParams();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    fetch(`http://localhost:4000/recipes/${params.id}`)
+      .then((r) => r.json())
+      .then((data) => setFormData(data));
+  }, []);
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    const postObject = {
-      method: "POST",
+    const putObject = {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify(formData),
     };
-    fetch("http://localhost:4000/recipes", postObject)
+    fetch(`http://localhost:4000/recipes/${formData.id}`, putObject)
       .then((r) => r.json())
       .then((data) => navigate(`/myrecipes/${data.id}`));
   };
@@ -51,7 +44,7 @@ function AddRecipe() {
   return (
     <div>
       <HeroImg size="small" />
-      <h1>Add new recipe</h1>
+      <h1>Edit recipe</h1>
       <form
         onSubmit={handleSubmit}
         style={{ width: "1000px", margin: "auto" }}
@@ -92,7 +85,7 @@ function AddRecipe() {
             style={{ display: "flex", justifyContent: "left", width: "80%" }}
           >
             <div style={{ width: "45%" }}>
-              <TextInput
+            <TextInput
                 element="input"
                 type="text"
                 name="serves"
@@ -151,4 +144,4 @@ function AddRecipe() {
   );
 }
 
-export default AddRecipe;
+export default EditRecipe;

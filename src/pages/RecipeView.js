@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { React, useState, useEffect } from "react";
 
 export default function RecipeView() {
@@ -11,10 +11,10 @@ export default function RecipeView() {
     fetch(`http://localhost:4000/recipes/${params.id}`)
       .then((r) => r.json())
       .then((data) => {
-          setRecipeToDisplay(data);
-          setRecipeParts(data.parts);
-          setRecipeMethod(data.steps)
-        });
+        setRecipeToDisplay(data);
+        setRecipeParts(data.parts);
+        setRecipeMethod(data.steps);
+      });
   }, []);
 
   return (
@@ -26,9 +26,11 @@ export default function RecipeView() {
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h1>{recipeToDisplay.name}</h1>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <button type="button" name="edit" className="button">
-            Edit
-          </button>
+          <Link to={`/myrecipes/edit/${recipeToDisplay.id}`}>
+            <button type="button" name="edit" className="button">
+              Edit
+            </button>
+          </Link>
           <button type="button" name="delete" className="button">
             Delete
           </button>

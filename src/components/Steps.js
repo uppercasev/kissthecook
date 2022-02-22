@@ -16,7 +16,7 @@ function Steps({ steps, updateForm }) {
   return (
     <div style={{ width: "1000px", margin: "auto" }}>
       <h2>Method</h2>
-      {steps.map((step, index) => {
+      {steps && steps.map((step, index) => {
         return (
           <div key={index}>
             <TextInput

@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Browse from "./pages/Browse";
 import RecipeView from "./pages/RecipeView";
 import AddRecipe from "./pages/AddRecipe";
+import EditRecipe from "./pages/EditRecipe";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
               path="/myrecipes/:id"
               element={<RecipeView />}
             />
-            <Route path="/add" element={<AddRecipe />} />
+            <Route path="/myrecipes/add" element={<AddRecipe />} />
+            <Route path="/myrecipes/edit/:id" element={<EditRecipe />} />
           </Routes>
         </div>
         <Footer />

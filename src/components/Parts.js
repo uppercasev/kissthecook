@@ -34,7 +34,7 @@ function Parts({ parts, updateForm }) {
   return (
     <div style={{ width: "1000px", margin: "auto" }}>
       <h2>Ingredient Parts</h2>
-      {parts.map((part, partIndex) => {
+      {parts && parts.map((part, partIndex) => {
         return (
           <div>
             <fieldset key={partIndex}>
@@ -42,14 +42,14 @@ function Parts({ parts, updateForm }) {
                 element="input"
                 type="text"
                 name={`parts[${partIndex}][name]`}
-                label="Name"
+                label="Part name"
                 size="80"
                 required={false}
                 value={part.name}
                 onChange={handleNameChange}
                 datakey={partIndex}
               />
-              {part.ingredients.map((item, index) => {
+              {part?.ingredients && part.ingredients.map((item, index) => {
                 return (
                   <TextInput
                     key={index}
@@ -78,9 +78,10 @@ function Parts({ parts, updateForm }) {
           </div>
         );
       })}
-      <button onClick={addPart} className="button">
+      <button onClick={addPart}>
         + Add another part
       </button>
+      <hr></hr>
     </div>
   );
 }
