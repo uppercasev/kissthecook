@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "database": "json-server --watch data/index.js -p 4000",
-    "lint:eslint": "npx eslint ./"
+    "lint": "npx eslint ./"
   },
   "eslintConfig": {
     "extends": [
