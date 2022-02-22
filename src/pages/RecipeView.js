@@ -3,8 +3,6 @@ import { React, useState, useEffect } from "react";
 
 export default function RecipeView() {
   const [recipeToDisplay, setRecipeToDisplay] = useState({});
-  const [recipeParts, setRecipeParts] = useState([]);
-  const [recipeMethod, setRecipeMethod] = useState([]);
   const params = useParams();
 
   useEffect(() => {
@@ -12,8 +10,6 @@ export default function RecipeView() {
       .then((r) => r.json())
       .then((data) => {
         setRecipeToDisplay(data);
-        setRecipeParts(data.parts);
-        setRecipeMethod(data.steps);
       });
   }, []);
 
@@ -55,7 +51,7 @@ export default function RecipeView() {
           </div>
           <div>
             <h2>Ingredients</h2>
-            {recipeParts.map((part) => {
+            {recipeToDisplay?.parts && recipeToDisplay.parts.map((part) => {
               return (
                 <div key={part.name}>
                   <p>{part.name.toUpperCase()}</p>
@@ -74,7 +70,7 @@ export default function RecipeView() {
         >
           <h2>Method</h2>
           <ol>
-            {recipeMethod.map((item, index) => {
+            {recipeToDisplay?.steps && recipeToDisplay.steps.map((item, index) => {
               return (
                 <div>
                   <li key={index}>{item}</li>

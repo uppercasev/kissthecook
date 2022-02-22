@@ -136,7 +136,7 @@ function EditRecipe() {
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button type="submit" name="delete" className="button">
-            ADD NEW RECIPE
+            UPDATE MY RECIPE
           </button>
         </div>
       </form>
