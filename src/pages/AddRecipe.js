@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ControlledInput from "../components/ControlledInput";
 import HeroImg from "../components/HeroImg";
 import Parts from "../components/Parts";
+import Steps from "../components/Steps";
 import TextInput from "../components/TextInput";
 
 function AddRecipe() {
@@ -13,8 +13,11 @@ function AddRecipe() {
     allergens: "",
     prep_time: "",
     cook_time: "",
-    parts: [{ name: "part", ingredients: [""] }, { name: "part2", ingredients: [""] }],
-    steps: [""]
+    parts: [
+      { name: "part1", ingredients: ["2 eggs", "1 cup milk"] },
+      { name: "part2", ingredients: [""] },
+    ],
+    steps: ["Mix wet stuff", "mix dry stuff"],
   });
 
   //   function handleSubmit(event) {
@@ -51,7 +54,7 @@ function AddRecipe() {
   //   }
 
   const onTextChange = (event) => {
-    updateForm(event.target.name, event.target.value)
+    updateForm(event.target.name, event.target.value);
   };
 
   const updateForm = (property, value) => {
@@ -63,7 +66,7 @@ function AddRecipe() {
   return (
     <div>
       <HeroImg size="small" />
-      <h1> Add new recipe</h1>
+      <h1>Add new recipe</h1>
       <form
         onSubmit={(event) => {
           event.preventDefault();
@@ -143,35 +146,17 @@ function AddRecipe() {
             </div>
           </div>
         </div>
-        <div><Parts parts={formData.parts} updateForm={updateForm}/>
+        <div>
+          <Parts parts={formData.parts} updateForm={updateForm} />
         </div>
         <div>
-          <ControlledInput
-            element="input"
-            type="text"
-            name="ingredients"
-            size="80"
-            required={true}
-          />
-          <button type="button" name="add_another">
-            +
+          <Steps steps={formData.steps} updateForm={updateForm}/>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button type="submit" name="delete" className="button">
+            Add recipe
           </button>
         </div>
-        <div>
-          <ControlledInput
-            element="textarea"
-            name="method"
-            required={false}
-            rows="4"
-            cols="75"
-          />
-          <button type="button" name="add_another">
-            +
-          </button>
-        </div>
-        <button type="submit" name="delete" className="button">
-          Add recipe
-        </button>
       </form>
     </div>
   );

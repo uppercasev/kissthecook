@@ -9,7 +9,8 @@ function TextInput({
   size,
   onChange,
   value,
-  datakey
+  datakey,
+  dataPartKey
 }) {
   const capitalise = () => {
     return name.charAt(0).toUpperCase() + name.slice(1);
@@ -30,6 +31,7 @@ function TextInput({
             onChange={onChange}
             size={size}
             datakey={datakey}
+            dataPartKey={dataPartKey}
           />
         </div>
       </div>
@@ -49,6 +51,7 @@ function TextInput({
             required={require}
             onChange={onChange}
             datakey={datakey}
+            dataPartKey={dataPartKey}
           ></textarea>
         </div>
       </div>
