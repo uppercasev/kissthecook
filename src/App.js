@@ -1,5 +1,5 @@
 import "./App.css";
-import { React, useState, useEffect } from "react";
+import { React } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
@@ -14,11 +14,13 @@ function App() {
   return (
     <div>
       <Router>
+        {/* We know how to use display flex, margin: auto is oldschool :)  */}
         <div style={{ width: "1200px", margin: "auto", marginBottom: "40px" }}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/browse" element={<Browse />} />
+            {/* Really cool react router stuff! */}
             <Route
               path="/myrecipes/:id"
               element={<RecipeView />}
