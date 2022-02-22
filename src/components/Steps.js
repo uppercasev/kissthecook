@@ -24,7 +24,7 @@ function Steps({ steps, updateForm }) {
               rows="5"
               cols="75"
               name={`parts[${index}][name]`}
-              label="Step"
+              label={"Step " + (index + 1)}
               size="80"
               required={true}
               value={step}
